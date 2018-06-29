@@ -14,7 +14,8 @@
     "hchs-vue-charts": "^1.2.8",
     "vue": "^2.5.11",
     "vue-axios": "^2.1.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-datepicker": "^2.0.3"
   },
   "browserslist": [
     "> 1%",
