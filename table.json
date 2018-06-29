@@ -1,0 +1,28 @@
+{
+   "pageviews": [
+        {
+           "number":1,
+           "page":"GIO A",
+           "pageviews":567,
+           "avgtimeonpage":"00:01:40"
+        },
+        {
+            "number":2,
+            "page":"GIO B",
+            "pageviews":401,
+            "avgtimeonpage":"00:08:00"
+         },
+         {
+            "number":3,
+            "page":"GIO C",
+            "pageviews":300,
+            "avgtimeonpage":"00:02:17"
+         },
+         {
+            "number":4,
+            "page":"GIO D",
+            "pageviews":281,
+            "avgtimeonpage":"00:01:00"
+         }
+   ]
+}
