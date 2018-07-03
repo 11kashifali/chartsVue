@@ -1,0 +1,49 @@
+{
+    "mylabels": ["Jan'18", "Feb'18", "Mar'18", "Apr'18", "May'18","Apr'18","Jun'18"],
+    "mydatasets":[
+        {
+            "label": "Total Users",
+            "fill": "false",
+            "lineTension": "0.1",
+            "backgroundColor": "rgb(244, 143, 66,0.4)",
+            "borderColor": "rgb(244, 143, 66,1)",
+            "borderCapStyle": "butt",
+            "borderDash": [],
+            "borderDashOffset": 0.0,
+            "borderJoinStyle": "miter",
+            "pointBorderColor": "rgb(244, 143, 66,1)",
+            "pointBackgroundColor": "#fff",
+            "pointBorderWidth": 5,
+            "pointHoverRadius": 5,
+            "pointHoverBackgroundColor": "rgb(244, 143, 66,1)",
+            "pointHoverBorderColor": "rgb(244, 143, 66,1)",
+            "pointHoverBorderWidth": 2,
+            "pointRadius": 1,
+            "pointHitRadius": 10,
+            "data": [45000, 47000, 46000, 45000, 46000,45000,45000],
+            "spanGaps": false
+        },
+        {
+            "label": "Total Users",
+            "fill": "false",
+            "lineTension": "0.1",
+            "backgroundColor": "rgb(0, 87, 229,0.4)",
+            "borderColor": "rgb(0, 87, 229,1)",
+            "borderCapStyle": "butt",
+            "borderDash": [],
+            "borderDashOffset": 0.0,
+            "borderJoinStyle": "miter",
+            "pointBorderColor": "rgb(0, 87, 229,1)",
+            "pointBackgroundColor": "#fff",
+            "pointBorderWidth": 5,
+            "pointHoverRadius": 5,
+            "pointHoverBackgroundColor": "rgb(0, 87, 229,1)",
+            "pointHoverBorderColor": "rgb(0, 87, 229,1)",
+            "pointHoverBorderWidth": 2,
+            "pointRadius": 1,
+            "pointHitRadius": 10,
+            "data": [20900, 21000, 24000, 24000, 25000,40000,45000],
+            "spanGaps": false
+        }
+    ]
+}

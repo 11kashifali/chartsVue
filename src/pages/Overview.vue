@@ -1,16 +1,16 @@
 <template>
   <div class="main">
+      <filemenu></filemenu>
     <div class="container">
       <date-picker class="datepicker" :lang="lang" v-model="time" format="YYYY-MM-DD" ></date-picker>
-      <div v-on:click="showmenu=!showmenu" class="datewise">Monthly
-        <ul v-show="showmenu" class="innermenu">
-          <li>Daily</li>
-          <li>Weekly</li>
-          <li>Monthly</li>
-        </ul>
-      </div>
+      <datewiser></datewiser>
     </div>
-    <chartjs-line :option="myoption" :height="110" v-if="mylabels" :labels="mylabels" :datasets="mydatasets" :bind="true"></chartjs-line>
+    <chartjs-line ref="mychart" id="canvas" :option="myoption" :height="110" v-if="mylabels" :labels="mylabels" :datasets="mydatasets" :bind="true">
+      
+    </chartjs-line>
+    <h4 id="maintitle">Number of users over month</h4>
+    <h4 id="xtitle">month</h4>
+    <h4 id="ytitle">Number of<br> users</h4>
     <div>
       <h5 style="margin:20px 0;">TopPageViews</h5>
     </div>
@@ -33,9 +33,15 @@
 <script>
   import 'chart.js'
   import DatePicker from 'vue2-datepicker'
+  import html2canvas from 'html2canvas'
+  import * as jsPDF from 'jspdf'
+  import FileMenu from '../components/File-Menu'
+  import DateWiseMenu from '../components/Datewise-Menu'
   export default {
     components:{
-      DatePicker
+      DatePicker,
+      'filemenu':FileMenu,
+      'datewiser':DateWiseMenu
     },
     mounted() {
       this.mylabels = null;
@@ -56,7 +62,7 @@
                   vm.$router.push({ path: '' })    
                 }
                 else if(this.getElementAtEvent(evt)[0]._datasetIndex == 1){
-                  vm.$router.push({ path: 'explore' })
+                  vm.$router.push({ path: 'activeuser' })
                 }
                 else if(this.getElementAtEvent(evt)[0]._datasetIndex == 2){
                   vm.$router.push({ path: 'realuser' })
@@ -76,7 +82,6 @@
     },
     data() {
       return {
-        showmenu:false,
         time: '',
         lang: {
         days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -126,30 +131,20 @@ table{
 .container .datepicker{
   float: right;
 }
-.datewise{
-  padding: 5px;
-  color:rgba(29, 165, 255);
-  float: right;
-  margin-right: 10px;
-  background: rgba(29, 165, 255, 0.226);
-  border: 1px solid rgba(29, 165, 255);
-  border-radius: 4px;
-  cursor: pointer;
-  position:relative;
+.main{
+  position: relative;
 }
-.datewise ul{
+#maintitle{
+  position:absolute;
+  left: 40%;
+}
+#xtitle{
+  position:absolute;
+  left:90%;
+}
+#ytitle{
   position: absolute;
-  background-color: white;
-  padding: 5px;
-  left: 0;
-  top: 105%;
-  width: 120%;
-  border: 1px solid rgb(177, 177, 177);
-  border-radius: 5px;
-  color:black;
-}
-.datewise ul li{
-  text-align: left;
-  list-style: none;
+  top:35%;
+  left: -6%;
 }
 </style>

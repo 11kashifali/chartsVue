@@ -2,7 +2,7 @@
     <div class="left-menu">
         <ul>
             <li v-on:click="hidechild()"><router-link to="/"> Overview</router-link></li>
-            <li><a v-on:click="activeuser=!activeuser" href="#">Active User</a><div class="tri"></div></li>
+            <li v-on:click="activeuser=!activeuser"><router-link  to="/activeuser">Active User</router-link><div class="tri"></div></li>
             <li v-show="activeuser"><router-link to="/explore">Explore</router-link>
             <li v-on:click="hidechild()"><router-link to="/realuser">Real User</router-link></li>
             <li v-on:click="hidechild()"><router-link to="/returninguser">Returning User</router-link></li>
