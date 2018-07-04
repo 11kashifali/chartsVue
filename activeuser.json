@@ -2,7 +2,7 @@
     "mylabels": ["Jan'18", "Feb'18", "Mar'18", "Apr'18", "May'18","Apr'18","Jun'18"],
     "mydatasets":[
         {
-            "label": "Total Users",
+            "label": "All Users",
             "fill": "false",
             "lineTension": "0.1",
             "backgroundColor": "rgb(244, 143, 66,0.4)",
@@ -24,7 +24,7 @@
             "spanGaps": false
         },
         {
-            "label": "Total Users",
+            "label": "Active Users",
             "fill": "false",
             "lineTension": "0.1",
             "backgroundColor": "rgb(0, 87, 229,0.4)",

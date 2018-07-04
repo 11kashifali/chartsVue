@@ -10,7 +10,7 @@
     </chartjs-line>
     <h4 id="maintitle">Number of users over month</h4>
     <h4 id="xtitle">month</h4>
-    <h4 id="ytitle">Number of<br> users</h4>
+    <h4 id="ytitle">Number<br> of users</h4>
     <div>
       <h5 style="margin:20px 0;">TopPageViews</h5>
     </div>
@@ -103,9 +103,9 @@
 </script>
 
 <style scoped>
-    #customers td, #customers th {
-    /*border: 1px solid #ddd;*/
-    padding: 8px;
+#customers td, #customers th {
+/*border: 1px solid #ddd;*/
+padding: 8px;
 }
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
@@ -146,5 +146,10 @@ table{
   position: absolute;
   top:35%;
   left: -6%;
+}
+@media(max-width:900px){
+  #ytitle{
+  left: -14%;
+}
 }
 </style>

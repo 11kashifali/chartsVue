@@ -27,7 +27,15 @@ export default {
 
 <style scoped>
     .left-menu{
-        min-height: 80vh;
+        grid-column: 1/2;
+    }
+    @media (max-width:900px){
+        .left-menu{
+            grid-column: 1/4;
+        }
+        ul{
+            height: 100%;
+        }
     }
     .left-menu>ul>li{
         list-style: none;
@@ -59,7 +67,7 @@ export default {
     ul{
         margin:30px 10px;
         background: whitesmoke;
-        width: 60%;
+        width: 100%;
         height: 70vh;
     }
 </style>

@@ -1,0 +1,27 @@
+{
+    "mylabels": ["Jan'18", "Feb'18", "Mar'18", "Apr'18", "May'18","Apr'18","Jun'18"],
+    "mydatasets":[
+        {
+            "label": "Active Users",
+            "fill": "false",
+            "lineTension": "0.1",
+            "backgroundColor": "rgb(127, 127, 127,0.4)",
+            "borderColor": "rgb(127, 127, 127,1)",
+            "borderCapStyle": "butt",
+            "borderDash": [],
+            "borderDashOffset": 0.0,
+            "borderJoinStyle": "miter",
+            "pointBorderColor": "rgb(127, 127, 127,1)",
+            "pointBackgroundColor": "#fff",
+            "pointBorderWidth": 5,
+            "pointHoverRadius": 5,
+            "pointHoverBackgroundColor": "rgb(127, 127, 127,1)",
+            "pointHoverBorderColor": "rgb(127, 127, 127,1)",
+            "pointHoverBorderWidth": 2,
+            "pointRadius": 1,
+            "pointHitRadius": 10,
+            "data": [20900, 21000, 24000, 24000, 25000,40000,45000],
+            "spanGaps": false
+        }
+    ]
+}

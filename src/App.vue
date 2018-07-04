@@ -28,7 +28,19 @@ export default {
 <style>
   .grid-container{
     display: grid;
-    grid-template-columns: 30vw 60vw 10vw;
+    grid-template-columns: 20vw 70vw 6vw;
+    overflow:hidden;
+    grid-gap: 10px;
+    /*grid-template-columns: 2fr 3fr 1fr;*/
+  }
+  .main{
+    grid-column: 2/3;
+    margin-left: 100px;
+  }
+  @media(max-width:900px){
+    .main{
+      grid-column:1/3;
+    }
   }
   *{
     padding: 0;
