@@ -2,7 +2,7 @@
     <div class="main">
         <filemenu></filemenu>
         <div class="container">
-            <select v-model="currentuser" v-on:change="userchange" name="clicks" id="clicks" aria-placeholder="Select ">
+            <select v-show="false"  name="clicks" id="clicks" aria-placeholder="Select ">
                 <option value="1" selected>Jhon</option>
                 <option value="2">Kahn</option>
                 <option value="3">Sarah</option>
@@ -11,6 +11,7 @@
             <date-picker class="datepicker" :lang="lang" v-model="time" format="YYYY-MM-DD" ></date-picker>
             <datewiser></datewiser>
         </div>
+        <div id="activeuser">Right Now<br><b style="font-size:40px;">{{activeuser}}</b><br>Active Users On Site</div>
         <chartjs-line style="margin-left:40px;"  id="canvas" :height="150" v-if="mylabels" :labels="mylabels" :datasets="mydatasets" bind="true"></chartjs-line>
         <div>
       <h5 style="margin:20px 0;">TopPageViews</h5>
@@ -52,7 +53,8 @@ export default {
             mylabels:null,
             mydatasets:null,
             tabledata:null,
-            currentuser:1
+            currentuser:1,
+            activeuser:null
         }
     },
     components:{
@@ -66,57 +68,13 @@ export default {
         setTimeout(function(){
                 self.mylabels = response.data.mylabels;
                 self.mydatasets = response.data.mydatasets;
+                self.activeuser = response.data.mydatasets[1].data[6];
         }, 400);
         this.axios.get('table.json').then((response) =>{
             this.tabledata = response.data.pageviews;
         })
       });
     },
-    methods:{
-        userchange(event){
-            if(this.currentuser == 1){
-                this.axios.get('jhon.json').then((response)=>{
-                    this.mylabels = null;
-                    var self = this;
-                    setTimeout(()=>{
-                        self.mylabels = response.data.mylabels;
-                        self.mydatasets = response.data.mydatasets;
-                    },200)
-                });
-            }
-            else if(this.currentuser == 2){
-                this.axios.get('kahn.json').then((response)=>{
-                    this.mylabels = null;
-                    var self = this;
-                    setTimeout(()=>{
-                        self.mylabels = response.data.mylabels;
-                        self.mydatasets = response.data.mydatasets;
-                    },200)
-                });
-            }
-            else if(this.currentuser == 3){
-                this.axios.get('sarah.json').then((response)=>{
-                    this.mylabels = null;
-                    var self = this;
-                    setTimeout(()=>{
-                        self.mylabels = response.data.mylabels;
-                        self.mydatasets = response.data.mydatasets;
-                    },200)
-                });
-            }
-            else{
-                this.axios.get('kelvin.json').then((response)=>{
-                    this.mylabels = null;
-                    var self = this;
-                    setTimeout(()=>{
-                        self.mylabels = response.data.mylabels;
-                        self.mydatasets = response.data.mydatasets;
-                    },200)
-                });
-            }
-            
-        }
-    }
 }
 </script>
 <style scoped>

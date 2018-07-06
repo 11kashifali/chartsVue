@@ -42,7 +42,7 @@
             "pointHoverBorderWidth": 2,
             "pointRadius": 1,
             "pointHitRadius": 10,
-            "data": [16000, 16500, 17000, 19000, 20000,22000,22000],
+            "data": [16000, 16500, 17000, 19000, 20000,22000,32000],
             "spanGaps": false
         },
         {
